@@ -156,8 +156,11 @@ print(c)</code></pre>
 ## [16]  4.590718e-07 -1.753498e-07  6.697766e-08 -2.558319e-08  9.771908e-09
 ## [21] -3.732537e-09  1.425702e-09 -5.445699e-10  2.080072e-10 -7.945178e-11
 ## [26]  3.034772e-11 -1.159184e-11  4.427569e-12 -1.691314e-12</code></pre>
-<pre class="r"><code>print(&quot;The sequence converging to golden ratio&quot;)</code></pre>
-<pre><code>## [1] &quot;The sequence converging to golden ratio&quot;</code></pre>
+<p>According to the question, <span class="math inline">\(F_{i+2}=F_{i+1}+F_{i}\)</span>.</p>
+<p>As a result, <span class="math inline">\(\frac{F_{i+2}}{F_{i+1}}=1+\frac{1}{\frac{F_{i+1}}{F_{i}}}\)</span>.</p>
+<p>Now, we solve the function <span class="math inline">\(x=1+\frac1x\)</span>. That is to say, <span class="math inline">\(x^2-x-1=0\)</span>.</p>
+<p>It can be solved that <span class="math inline">\(x_1=\frac{1+\sqrt{5}}{2}\)</span> and <span class="math inline">\(x_2=\frac{1-\sqrt{5}}{2}\)</span>.</p>
+<p>Notice that <span class="math inline">\(|x_2|&lt;1\)</span>, so the sequence converges to <span class="math inline">\(\frac{1+\sqrt{5}}{2}\)</span>.</p>
 </div>
 <div id="exercises-3a" class="section level3">
 <h3>exercises 3(a)</h3>
@@ -501,7 +504,7 @@ hornerpoly(2,c(1,1,1))</code></pre>
 <h3>exercises 3(a)</h3>
 <pre class="r"><code>system.time(directpoly(x=seq(-10, 10, length=5000000),c(1, -2, 2, 3, 4, 6, 7)))</code></pre>
 <pre><code>##    user  system elapsed 
-##    1.18    0.08    1.25</code></pre>
+##    1.19    0.06    1.25</code></pre>
 <pre class="r"><code>system.time(hornerpoly(x=seq(-10, 10, length=5000000),c(1, -2, 2, 3, 4, 6, 7)))</code></pre>
 <pre><code>##    user  system elapsed 
 ##    0.13    0.01    0.14</code></pre>
@@ -510,10 +513,10 @@ hornerpoly(2,c(1,1,1))</code></pre>
 <h3>exercises 3(b)</h3>
 <pre class="r"><code>system.time(directpoly(x=seq(-10, 10, length=5000000),c(2,17,-3)))</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.25    0.03    0.28</code></pre>
+##    0.26    0.03    0.30</code></pre>
 <pre class="r"><code>system.time(hornerpoly(x=seq(-10, 10, length=5000000),c(2,17,-3)))</code></pre>
 <pre><code>##    user  system elapsed 
-##    0.06    0.02    0.07</code></pre>
+##    0.06    0.01    0.08</code></pre>
 </div>
 </div>
 

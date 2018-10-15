@@ -28,8 +28,17 @@ print("The sequence appear to be converging")
 c=1
 c[1:29]=b[1:29]-(1+5^0.5)/2
 print(c)
-print("The sequence converging to golden ratio")
 ```
+
+According to the question, $F_{i+2}=F_{i+1}+F_{i}$.
+
+As a result, $\frac{F_{i+2}}{F_{i+1}}=1+\frac{1}{\frac{F_{i+1}}{F_{i}}}$.
+
+Now, we solve the function $x=1+\frac1x$. That is to say, $x^2-x-1=0$.
+
+It can be solved that $x_1=\frac{1+\sqrt{5}}{2}$ and $x_2=\frac{1-\sqrt{5}}{2}$.
+
+Notice that $|x_2|<1$, so the sequence converges to $\frac{1+\sqrt{5}}{2}$.
 
 ###exercises 3(a)
 
